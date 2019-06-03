@@ -10,15 +10,5 @@
 
 // eslint-disable-next-line import/prefer-default-export
 export function union(arr1, arr2) {
-  const result = [];
-
-  arr1.forEach(element => {
-    if (result.indexOf(element) === -1) result.push(element);
-  });
-
-  arr2.forEach(element => {
-    if (result.indexOf(element) === -1) result.push(element);
-  });
-
-  return result;
+  return [...new Set(arr1.concat(arr2))];
 }

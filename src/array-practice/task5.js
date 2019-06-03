@@ -1,3 +1,4 @@
+/* eslint-disable no-void */
 /**
  * Реализовать функцию createGenerator в этом файле, и экспортировать ее.
  *
@@ -13,3 +14,5 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+// eslint-disable-next-line import/prefer-default-export
