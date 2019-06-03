@@ -15,3 +15,18 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export function arrayDiff(arr1, arr2) {
+  const result = [];
+
+  arr1.forEach(element => {
+    if (arr2.indexOf(element) === -1) result.push(element);
+  });
+
+  arr2.forEach(element => {
+    if (arr1.indexOf(element) === -1) result.push(element);
+  });
+
+  return result;
+}
