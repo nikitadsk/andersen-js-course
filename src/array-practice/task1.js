@@ -14,3 +14,14 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export function any(arr, fun = x => !!x === true) {
+  let result = false;
+  const positiveArr = arr.filter(fun);
+
+  if (positiveArr.length !== 0) result = true;
+  else result = false;
+
+  return result;
+}
