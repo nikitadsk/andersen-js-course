@@ -34,6 +34,7 @@ import { createGenerator } from './array-practice/task5';
 import { transformArrayToNumber } from './array-practice/task6';
 import { take } from './array-practice/task7';
 import { without } from './array-practice/task8';
+import { indexOfAll } from './array-practice/task9';
 
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
@@ -130,5 +131,10 @@ console.log('=============');
 
 console.log(without([2, 1, 2, 3], 1, 2));
 console.log(without([2, 1, 10, 20], 1, 2));
+
+console.log('=============');
+
+console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1));
+console.log(indexOfAll([1, 2, 3], 4));
 
 console.log('=============');
