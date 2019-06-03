@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-void */
 /**
  * Реализовать функцию createGenerator в этом файле, и экспортировать ее.
@@ -16,3 +17,12 @@
  */
 
 // eslint-disable-next-line import/prefer-default-export
+export function createGenerator(arr) {
+  var index = 0;
+  return {
+    next() {
+      if (index >= arr.length) return 'Complete!';
+      return arr[index++];
+    },
+  };
+}

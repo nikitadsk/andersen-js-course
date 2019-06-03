@@ -103,11 +103,11 @@ console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
 console.log('=============');
 
 const generator = createGenerator([1, '6', 3, 2]);
-generator.next();
-generator.next();
-generator.next();
-generator.next();
-generator.next();
-generator.next();
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
 
 console.log('=============');
