@@ -38,10 +38,7 @@ export function task6New() {
     };
   }
 
-  var { name, value, role, isActive, cases } = userModule();
-
+  var { name, value, role, isActive = false, cases } = userModule();
   role = role.name;
-  isActive = isActive === undefined ? false : isActive;
-
   return [name, value, role, isActive, cases[0].id];
 }
