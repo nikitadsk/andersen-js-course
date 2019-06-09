@@ -23,8 +23,8 @@ export function task7Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task7New() {
-  var obj = { test: 0 },
-    obj2 = { foo: 1, bar: 2 };
+  const obj = { test: 0 };
+  const obj2 = { foo: 1, bar: 2 };
   Object.assign(obj, obj2);
   return obj;
 }
