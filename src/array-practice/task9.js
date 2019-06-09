@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 /**
  * Реализовать функцию indexOfAll в этом файле, и экспортировать ее.
  *
@@ -16,9 +15,9 @@
 export function indexOfAll(arr, num) {
   const result = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === num) result.push(i);
-  }
+  arr.forEach((item, index) => {
+    if (item === num) result.push(index);
+  });
 
   return result;
 }
