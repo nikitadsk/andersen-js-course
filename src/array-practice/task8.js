@@ -13,5 +13,5 @@
  */
 // eslint-disable-next-line import/prefer-default-export
 export function without(arr, ...nums) {
-  return arr.filter(element => nums.indexOf(element) === -1);
+  return arr.filter(element => !nums.includes(element));
 }
