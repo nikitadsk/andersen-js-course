@@ -17,11 +17,5 @@
 
 // eslint-disable-next-line import/prefer-default-export
 export function any(arr, fun = x => !!x) {
-  let result = false;
-  const positiveArr = arr.filter(fun);
-
-  if (positiveArr.length !== 0) result = true;
-  else result = false;
-
-  return result;
+  return arr.some(fun);
 }
