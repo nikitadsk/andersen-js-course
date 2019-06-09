@@ -21,8 +21,7 @@ export function createGenerator(arr) {
   var index = 0;
   return {
     next() {
-      if (index >= arr.length) return 'Complete!';
-      return arr[index++];
+      return index >= arr.length ? 'Complete!' : arr[index++];
     },
   };
 }
