@@ -18,10 +18,8 @@ export const meetups = [
 ];
 
 export function membersOnActiveMeetups(meetups) {
-  let result = 0;
-  meetups.forEach(element => {
-    if (element.isActive) result += element.members;
-  });
-
-  return result;
+  return meetups.reduce((accumulator, currentItem) => {
+    if (currentItem.isActive) accumulator += currentItem.members;
+    return accumulator;
+  }, 0);
 }
