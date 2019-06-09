@@ -14,7 +14,9 @@
 // eslint-disable-next-line import/prefer-default-export
 export function indexOfAll(arr, num) {
   return arr.reduce((result, item, index) => {
-    if (item === num) result.push(index);
+    if (item === num) {
+      result.push(index);
+    }
     return result;
   }, []);
 }
