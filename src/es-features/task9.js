@@ -18,7 +18,7 @@ export function task9Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task9New() {
-  var result = 'test'.indexOf('est') !== -1;
+  var result = 'test'.includes('est');
   var findResult = [22, 1, 90, 70].find(value => value < 3);
 
   return [result, findResult];
