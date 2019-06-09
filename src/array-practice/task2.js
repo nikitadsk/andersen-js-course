@@ -18,8 +18,8 @@
 
 // eslint-disable-next-line import/prefer-default-export
 export function arrayDiff(arr1, arr2) {
-  const res1 = arr1.filter(item => arr2.indexOf(item) === -1);
-  const res2 = arr2.filter(item => arr1.indexOf(item) === -1);
+  const res1 = arr1.filter(item => !arr2.includes(item));
+  const res2 = arr2.filter(item => !arr1.includes(item));
 
   return res1.concat(res2);
 }
