@@ -43,7 +43,7 @@ export function task6New() {
     value,
     role: { name: role },
     isActive = false,
-    cases,
+    cases: [{ id: cases }],
   } = userModule();
-  return [name, value, role, isActive, cases[0].id];
+  return [name, value, role, isActive, cases];
 }
