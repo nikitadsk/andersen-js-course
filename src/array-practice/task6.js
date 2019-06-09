@@ -23,7 +23,5 @@
  */
 
 export function transformArrayToNumber(arr, fun, num = 0) {
-  arr.unshift(num);
-  const result = arr.reduce(fun);
-  return result;
+  return arr.reduce(fun, num);
 }
