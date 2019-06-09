@@ -13,7 +13,7 @@
 // eslint-disable-next-line import/prefer-default-export
 export function forEachRight(arr, fun) {
   arr
-    .slice(0, arr.length)
+    .slice()
     .reverse()
     .forEach(fun);
 }
