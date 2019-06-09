@@ -18,8 +18,7 @@ export const meetups = [
 ];
 
 export function membersOnActiveMeetups(meetups) {
-  return meetups.reduce((accumulator, currentItem) => {
-    const { isActive, members } = currentItem;
+  return meetups.reduce((accumulator, { isActive, members }) => {
     return isActive ? accumulator + members : accumulator;
   }, 0);
 }
