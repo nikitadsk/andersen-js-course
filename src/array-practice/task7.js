@@ -14,5 +14,5 @@
  */
 
 export function take(arr, num) {
-  return num >= arr.length ? arr : arr.splice(0, num);
+  return num >= arr.length ? arr : arr.slice(0, num);
 }
