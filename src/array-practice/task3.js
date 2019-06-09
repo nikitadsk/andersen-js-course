@@ -16,5 +16,4 @@ export function forEachRight(arr, fun) {
     .concat([])
     .reverse()
     .forEach(fun);
-  console.log(arr);
 }
