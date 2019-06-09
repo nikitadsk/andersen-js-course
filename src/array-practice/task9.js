@@ -13,11 +13,8 @@
 
 // eslint-disable-next-line import/prefer-default-export
 export function indexOfAll(arr, num) {
-  const result = [];
-
-  arr.forEach((item, index) => {
+  return arr.reduce((result, item, index) => {
     if (item === num) result.push(index);
-  });
-
-  return result;
+    return result;
+  }, []);
 }
