@@ -29,19 +29,16 @@ export function task8Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task8New() {
-  var obj = {
+  const obj = {
     nums: [0, 2, 5, 10, 15],
     fives: [],
     calculateNumsFive() {
-      var self = this;
-
-      // eslint-disable-next-line no-restricted-syntax
-      for (const num of self.nums) {
-        if (num % 5 === 0) {
-          self.fives.push(num);
+      this.nums.forEach(v => {
+        if (v % 5 === 0) {
+          this.fives.push(v);
         }
-      }
-      return self.fives;
+      });
+      return this.fives;
     },
   };
 
