@@ -31,14 +31,13 @@ export function task8Old() {
 export function task8New() {
   const obj = {
     nums: [0, 2, 5, 10, 15],
-    fives: [],
     calculateNumsFive() {
-      this.nums.forEach(v => {
+      return this.nums.reduce((result, v) => {
         if (v % 5 === 0) {
-          this.fives.push(v);
+          result.push(v);
         }
-      });
-      return this.fives;
+        return result;
+      }, []);
     },
   };
 
