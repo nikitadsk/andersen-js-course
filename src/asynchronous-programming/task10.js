@@ -1,3 +1,4 @@
+/* eslint-disable no-return-await */
 const task10 = () => {
   class Musician {
     constructor(albumUrl) {
@@ -6,8 +7,7 @@ const task10 = () => {
 
     async getAlbums() {
       const response = await fetch(this.albums);
-      const albums = await response.json();
-      return albums;
+      return await response.json();
     }
   }
   const musician = new Musician('https://jsonplaceholder.typicode.com/albums');
