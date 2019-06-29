@@ -8,6 +8,7 @@ import task4 from './asynchronous-programming/task4';
 import { parallel, sequence } from './asynchronous-programming/task5';
 import getResolvedPromise from './asynchronous-programming/task6';
 import task7 from './asynchronous-programming/task7';
+import task8 from './asynchronous-programming/task8';
 
 require('babel-polyfill');
 
@@ -45,3 +46,6 @@ getResolvedPromise(500).then(value => {
 });
 
 task7();
+
+task8('https://jsonplaceholder.typicode.com/users');
+task8('ht://jsonplaceholder.typicode.com/users');
