@@ -1,10 +1,15 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-throw-literal */
+
 import { foo, createCb } from './asynchronous-programming/task1';
 import { failureCb, successCb, parseJSON } from './asynchronous-programming/task2';
 import delay from './asynchronous-programming/task3';
 import task4 from './asynchronous-programming/task4';
 import { parallel, sequence } from './asynchronous-programming/task5';
 import getResolvedPromise from './asynchronous-programming/task6';
+import task7 from './asynchronous-programming/task7';
+
+require('babel-polyfill');
 
 console.log('============task1==============');
 
@@ -38,3 +43,5 @@ getResolvedPromise(500).then(value => {
     console.log('This is finally');
   }
 });
+
+task7();
