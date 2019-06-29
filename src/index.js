@@ -1,6 +1,7 @@
 import { foo, createCb } from './asynchronous-programming/task1';
 import { failureCb, successCb, parseJSON } from './asynchronous-programming/task2';
 import delay from './asynchronous-programming/task3';
+import task4 from './asynchronous-programming/task4';
 
 console.log('============task1==============');
 
@@ -16,8 +17,6 @@ parseJSON('{x}', successCb, failureCb);
 
 console.log('===============================');
 
-console.log('============task3==============');
+delay(1000).then(value => console.log(`Done with ${value} task3`));
 
-delay(1000).then(value => console.log(`Done with ${value}`));
-
-console.log('===============================');
+task4();
