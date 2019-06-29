@@ -16,11 +16,18 @@ function parallel() {
 }
 
 function sequence() {
-  const promises = responses();
-  const result = [];
-  promises.map(value => value.then(data => result.push(data)));
+  const result = urls.reduce((accum, next) => {
+    return accum.then(coupling =>
+      fetch(next)
+        .then(response => response.json())
+        .then(element => [...coupling, element])
+    );
+  }, Promise.resolve([]));
 
-  console.log(result);
+  result.then(element => {
+    console.log('sequence');
+    console.log(element);
+  });
 }
 
 export { parallel, sequence };
