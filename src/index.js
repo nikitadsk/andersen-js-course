@@ -35,17 +35,14 @@ task4();
 parallel();
 sequence();
 
-getResolvedPromise(500).then(value => {
-  try {
+getResolvedPromise(500)
+  .then(value => {
     if (value > 300) {
       throw 'Ошибка';
     }
-  } catch (error) {
-    console.log(error);
-  } finally {
-    console.log('This is finally');
-  }
-});
+  })
+  .catch(error => console.log(error))
+  .finally(() => console.log('This is Finally'));
 
 task7();
 
