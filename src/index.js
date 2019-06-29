@@ -10,6 +10,7 @@ import getResolvedPromise from './asynchronous-programming/task6';
 import task7 from './asynchronous-programming/task7';
 import task8 from './asynchronous-programming/task8';
 import task9 from './asynchronous-programming/task9';
+import task10 from './asynchronous-programming/task10';
 
 require('babel-polyfill');
 
@@ -52,3 +53,5 @@ task8('https://jsonplaceholder.typicode.com/users');
 task8('ht://jsonplaceholder.typicode.com/users');
 
 task9();
+
+task10();
