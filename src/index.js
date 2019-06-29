@@ -2,6 +2,7 @@ import { foo, createCb } from './asynchronous-programming/task1';
 import { failureCb, successCb, parseJSON } from './asynchronous-programming/task2';
 import delay from './asynchronous-programming/task3';
 import task4 from './asynchronous-programming/task4';
+import { parallel, sequence } from './asynchronous-programming/task5';
 
 console.log('============task1==============');
 
@@ -20,3 +21,6 @@ console.log('===============================');
 delay(1000).then(value => console.log(`Done with ${value} task3`));
 
 task4();
+
+parallel();
+sequence();
